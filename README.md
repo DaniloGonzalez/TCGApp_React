@@ -1,83 +1,52 @@
-# TCG App
+# TCG App React
 
-TCG App es un proyecto web desarrollado como parte del ramo de Full Stack II.
+Migración de TCG App para Full Stack II. Esta copia conserva el historial y los archivos del proyecto original.
 
-La aplicación está pensada como una plataforma para jugadores y organizadores de juegos de cartas coleccionables (TCG), permitiendo visualizar torneos, consultar rankings y acceder a diferentes secciones según el tipo de usuario.
+## Estado actual
 
-## Estado del proyecto
+Etapa 1 completada: proyecto React con Vite y JavaScript en `frontend/`, React Router instalado y dependencias registradas en `package-lock.json`.
 
-Actualmente el proyecto corresponde a una primera versión del frontend.
+La pantalla de React todavía corresponde a la plantilla inicial. Las páginas, el CRUD local y la sesión se implementarán en las siguientes etapas. Spring Boot queda fuera de esta entrega. Las pruebas con Vitest se incorporarán al final del desarrollo.
 
-La aplicación utiliza:
+## Ejecutar React
 
-- HTML
-- CSS
-- JavaScript
+Desde esta carpeta:
 
-Por el momento no existe conexión con una API ni base de datos. Los datos mostrados son datos de prueba utilizados para construir y diseñar la interfaz.
+```powershell
+cd frontend
+npm ci
+npm run dev
+```
 
-En una etapa posterior se espera conectar este frontend con una API REST desarrollada previamente con Spring Boot.
+Abrir la dirección que indique Vite en la terminal. Para detenerlo, usar Ctrl+C.
 
-## Funcionalidades actuales
+Entorno utilizado para preparar el proyecto: Node.js 22.20.0 y npm 11.17.0.
 
-La aplicación cuenta con:
+## Comandos disponibles
 
-- Página de inicio.
-- Listado de torneos.
-- Ranking de jugadores.
-- Registro de usuarios.
-- Inicio de sesión simulado.
-- Perfil de jugador.
-- Panel de administrador.
-- Navegación entre las diferentes páginas.
-- Validaciones básicas mediante JavaScript.
-- Diferenciación entre usuario normal y administrador.
+Ejecutar desde `frontend/`:
 
-## Usuarios de prueba
+```powershell
+npm run dev
+npm run build
+npm run preview
+npm run lint
+```
 
-Para probar el inicio de sesión se utilizan actualmente los siguientes usuarios:
+`build` genera `frontend/dist/`; `preview` permite revisar esa compilación localmente. No hay pruebas unitarias configuradas todavía.
 
-### Administrador
+## Estructura
 
-Correo:
+- `frontend/`: nueva aplicación React con Vite.
+- `pages/`, `css/`, `js/` y `assets/`: versión HTML original, conservada como referencia.
+- `MIGRACION_A_REACT.md`: guía técnica anterior.
+- `PLAN_MIGRACION_REACT.md`: alcance y orden de implementación actualizados según la evaluación.
 
-`admin@tcgapp.cl`
+La versión original no tiene un CRUD funcional. El plan contempla implementarlo con JavaScript y localStorage en la nueva aplicación.
 
-Contraseña:
+## Repositorios
 
-`admin123`
+- Original: https://github.com/DaniloGonzalez/TCGApp
+- Migración: https://github.com/DaniloGonzalez/TCGApp_React
 
-### Jugador
-
-Correo:
-
-`user@tcgapp.cl`
-
-Contraseña:
-
-`user123`
-
-Estos usuarios son únicamente datos de prueba utilizados para simular el comportamiento del login.
-
-## Estructura del proyecto
-
-```text
-TCG-APP/
-├── assets/
-├── css/
-│   └── stylesheet.css
-├── js/
-│   ├── login.js
-│   └── registro.js
-├── pages/
-│   ├── admin/
-│   ├── auth/
-│   │   ├── login.html
-│   │   └── registro.html
-│   ├── jugador/
-│   ├── ranking/
-│   │   └── ranking.html
-│   ├── torneos/
-│   │   └── torneos.html
-│   └── index.html
-└── README.md
+El remoto de esta copia apunta únicamente al repositorio de migración.
