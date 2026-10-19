@@ -8,7 +8,41 @@ export default function EditarTorneoPage() {
   const navigate = useNavigate()
   const { torneos, actualizar } = useTorneos()
   const torneo = torneos.find((actual) => actual.id === id)
-  if (!torneo) return <><Hero title="Torneo no encontrado" description="No es posible editar un torneo inexistente." /><Link to="/admin" className="main-button">Volver al panel</Link></>
-  function guardar(datos) { if (actualizar(id, datos)) navigate('/admin') }
-  return <><Hero title="Editar torneo" description={`Modifica los datos de ${torneo.nombre}.`} /><section className="form-content"><h2>Datos del torneo</h2><TorneoForm torneoInicial={torneo} onSave={guardar} submitText="Guardar cambios" /></section></>
+
+  if (!torneo) {
+    return (
+      <>
+        <Hero
+          title="Torneo no encontrado"
+          description="No es posible editar un torneo inexistente."
+        />
+        <Link to="/admin" className="main-button">
+          Volver al panel
+        </Link>
+      </>
+    )
+  }
+
+  function guardar(datos) {
+    if (actualizar(id, datos)) {
+      navigate('/admin')
+    }
+  }
+
+  return (
+    <>
+      <Hero
+        title="Editar torneo"
+        description={`Modifica los datos de ${torneo.nombre}.`}
+      />
+      <section className="form-content">
+        <h2>Datos del torneo</h2>
+        <TorneoForm
+          torneoInicial={torneo}
+          onSave={guardar}
+          submitText="Guardar cambios"
+        />
+      </section>
+    </>
+  )
 }
