@@ -52,4 +52,4 @@ main { width: min(80%, 1200px); margin: 0 auto; flex: 1; }
 .ranking-table tbody th { font-weight: normal; }
 footer { padding: 20px; margin-top: 40px; text-align: center; }
 footer p { margin: 0; color: #a8aebb; }
-@media (max-width: 800px) { main { width: 92%; } .navbar { width: 100%; flex-direction: column; } .nav-links { gap: 12px; } .tournament-list { grid-template-columns: 1fr; } .hero-content { padding: 32px 18px; } .hero-title { font-size: 30px; } .main-content, .tournament-card { padding: 20px; } }
+@media (max-width: 800px) { main { width: 92%; } .navbar { width: 100%; flex-direction: column; } .nav-links { gap: 12px; } .tournament-list { grid-template-columns: 1fr; } .hero-content { padding: 32px 18px; } .hero-title { font-size: 30px; } .main-content, .tournament-card, .filters, .form-content { padding: 20px; } .filters { grid-template-columns: 1fr; } .admin-tournament { align-items: flex-start; flex-direction: column; } }
