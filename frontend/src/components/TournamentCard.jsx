@@ -1,5 +1,4 @@
 import { Link } from 'react-router'
-import { formatDate } from '../utils/formatDate.js'
 
 export default function TournamentCard({ torneo, destacado = false }) {
   return (
@@ -8,7 +7,7 @@ export default function TournamentCard({ torneo, destacado = false }) {
       <h2 className="card-title">{torneo.nombre}</h2>
       <p className="main-text">{torneo.descripcion}</p>
       <ul className="main-list">
-        {destacado ? <><li>Fecha: {torneo.fecha}</li><li>Ubicación: {torneo.ubicacion}</li><li>Premio: {torneo.premio}</li></> : <><li>Juego: {torneo.juego}</li><li>Fecha: {formatDate(torneo.fecha)}</li><li>Formato: {torneo.formato}</li><li>Jugadores: {torneo.inscritos} / {torneo.cupo}</li><li>Estado: {torneo.estado}</li></>}
+        {destacado ? <><li>Fecha: {torneo.fecha}</li><li>Ubicación: {torneo.ubicacion}</li><li>Premio: {torneo.premio}</li></> : <><li>Juego: {torneo.juego}</li><li>Fecha: {torneo.fecha}</li><li>Formato: {torneo.formato}</li><li>Jugadores: {torneo.inscritos} / {torneo.cupo}</li><li>Estado: {torneo.estado}</li></>}
       </ul>
       {!destacado && <Link to={`/torneos/${torneo.id}`} className="main-button">Ver detalles</Link>}
     </article>

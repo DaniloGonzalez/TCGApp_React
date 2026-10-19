@@ -3,7 +3,7 @@ import { MemoryRouter } from 'react-router'
 import { describe, expect, it } from 'vitest'
 import TournamentCard from '../components/TournamentCard.jsx'
 
-const torneo = { id: 'prueba', nombre: 'Copa React', descripcion: 'Torneo de ejemplo', juego: 'Pokemon TCG', fecha: '2026-10-20', formato: 'Standard', inscritos: 8, cupo: 16, estado: 'Inscripciones abiertas' }
+const torneo = { id: 'prueba', nombre: 'Copa React', descripcion: 'Torneo de ejemplo', juego: 'Pokemon TCG', fecha: '20/10/2026', formato: 'Standard', inscritos: 8, cupo: 16, estado: 'Inscripciones abiertas' }
 
 describe('TournamentCard', () => {
   it('muestra los datos recibidos por props', () => {

@@ -6,7 +6,7 @@ function completarFormulario() {
   fireEvent.change(screen.getByLabelText('Nombre'), { target: { value: 'Torneo Vitest' } })
   fireEvent.change(screen.getByLabelText('Descripción'), { target: { value: 'Descripción simple' } })
   fireEvent.change(screen.getByLabelText('Juego'), { target: { value: 'Gundam' } })
-  fireEvent.change(screen.getByLabelText('Fecha'), { target: { value: '2026-12-01' } })
+  fireEvent.change(screen.getByLabelText('Fecha'), { target: { value: '01/12/2026' } })
 }
 
 describe('TorneoForm', () => {

@@ -1,7 +1,7 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { actualizarTorneo, crearTorneo, eliminarTorneo, obtenerTorneos } from '../services/torneosService.js'
 
-const torneoNuevo = { nombre: 'Torneo de prueba', descripcion: 'Descripción de prueba', juego: 'Pokemon TCG', fecha: '2026-12-01', formato: 'Standard', inscritos: 0, cupo: 16, estado: 'Próximamente' }
+const torneoNuevo = { nombre: 'Torneo de prueba', descripcion: 'Descripción de prueba', juego: 'Pokemon TCG', fecha: '01/12/2026', formato: 'Standard', inscritos: 0, cupo: 16, estado: 'Próximamente' }
 
 describe('torneosService', () => {
   beforeEach(() => {
